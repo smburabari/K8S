@@ -1,0 +1,23 @@
+# Terraform provider directories and lockfiles
+**/.terraform/
+**/.terraform.lock.hcl
+
+# Terraform state files (never commit)
+**/*.tfstate
+**/*.tfstate.backup
+
+# Terraform vars - ALLOW tfvars (team needs them)
+# Do NOT ignore tfvars files
+# **/*.tfvars
+# **/*.auto.tfvars
+
+# Crash logs
+crash.log
+
+# Kustomize build artifacts (generated, not source)
+**/kustomize-build/
+
+# OS & IDE files
+.DS_Store
+.idea/
+.vscode/
