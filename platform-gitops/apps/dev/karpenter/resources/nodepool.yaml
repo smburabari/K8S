@@ -1,0 +1,22 @@
+apiVersion: karpenter.sh/v1alpha5
+kind: NodePool
+metadata:
+  name: default
+spec:
+  template:
+    metadata:
+      labels:
+        capacity-type: spot
+    spec:
+      nodeClassRef:
+        name: default
+      requirements:
+        - key: "karpenter.sh/capacity-type"
+          operator: In
+          values:
+            - spot
+  limits:
+    cpu: "100"
+  disruption:
+    consolidationPolicy: WhenEmpty
+    consolidateAfter: 30s

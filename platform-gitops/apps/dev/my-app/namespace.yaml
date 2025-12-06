@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: my-app-dev
+  labels:
+    app: my-app
+    environment: dev

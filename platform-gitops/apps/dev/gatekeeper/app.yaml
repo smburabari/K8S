@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gatekeeper-dev
+  namespace: argocd
+spec:
+  project: platform
+  source:
+    repoURL: https://github.com/<your-org>/platform-gitops.git
+    targetRevision: main
+    path: apps/dev/gatekeeper
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: gatekeeper-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

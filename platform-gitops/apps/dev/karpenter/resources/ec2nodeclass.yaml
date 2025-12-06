@@ -1,0 +1,11 @@
+apiVersion: karpenter.k8s.aws/v1alpha1
+kind: EC2NodeClass
+metadata:
+  name: default
+spec:
+  amiFamily: AL2
+  role: "<node-instance-profile-name>"
+  subnetSelector:
+    kubernetes.io/role/internal-elb: "1"
+  securityGroupSelector:
+    kubernetes.io/cluster/<cluster-name>: owned
