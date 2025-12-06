@@ -6,7 +6,7 @@ metadata:
 spec:
   project: platform
   source:
-    repoURL: https://github.com/<your-org>/platform-gitops.git
+    repoURL: https://github.com/smburabari/platform-gitops.git
     targetRevision: main
     path: apps/dev/aws-load-balancer-controller
   destination:
