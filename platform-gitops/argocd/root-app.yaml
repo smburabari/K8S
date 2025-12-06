@@ -6,7 +6,7 @@ metadata:
 spec:
   project: platform
   source:
-    repoURL: https://github.com/smburabari/K8S/tree/main/platform-gitops
+    repoURL: https://github.com/smburabari/platform-gitops.git
     path: apps
   destination:
     namespace: argocd
