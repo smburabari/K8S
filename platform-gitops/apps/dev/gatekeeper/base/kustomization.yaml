@@ -3,3 +3,7 @@ kind: Kustomization
 
 resources:
   - https://raw.githubusercontent.com/open-policy-agent/gatekeeper/master/deploy/gatekeeper.yaml
+
+images:
+  - name: openpolicyagent/gatekeeper
+    newTag: v3.16.0
